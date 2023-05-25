@@ -16,7 +16,7 @@ class Scheduler extends PluginTask{
             if((time() - $time) > $this->plugin->interval){
                 $p = $this->plugin->getServer()->getPlayer($player);
                 if($p instanceof Player){
-                    $p->sendMessage("§7[§cCombatLogger§7]§c You can now logout.§r");
+                    $p->sendMessage("§b»§c You can now logout.§r");
                     unset($this->plugin->players[$player]);
                 }else unset($this->plugin->players[$player]);
             }
