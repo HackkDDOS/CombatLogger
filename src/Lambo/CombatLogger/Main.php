@@ -115,7 +115,7 @@ class Main extends PluginBase implements Listener{
         if(isset($this->players[$event->getPlayer()->getName()])){
             $cmd = strtolower(explode(' ', $event->getMessage())[0]);
             if(isset($this->blockedcommands[$cmd])){
-                $event->getPlayer()->sendMessage("§7[§cCombatLogger§7]§c You cannot use this command during combat.§r");
+                $event->getPlayer()->sendMessage("§b»§c You cannot use this command during combat.§r");
                 $event->setCancelled();
             }
         }
